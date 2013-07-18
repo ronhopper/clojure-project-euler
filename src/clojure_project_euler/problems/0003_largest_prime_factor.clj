@@ -10,7 +10,7 @@
   ([n f_max] (if (= n 1)
                f_max
                (let [f (smallest-prime-factor n)]
-                 (largest-prime-factor (/ n f) f)))))
+                 (recur (/ n f) f)))))
 
 (largest-prime-factor 600851475143)
 
